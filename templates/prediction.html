@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="/static/prediction.css">
+</head>
+<body>
+<header>
+      <div class="container">
+        <h1>Crop Prediction and Recommender System</h1>
+      </div>
+      </header>
+    <div class="nav-area">
+      <ul>
+            <li ><a href="home">Home</a></li>
+            <li class="active"><a href="prediction">Prediction</a></li>
+            <li><a href="guide">Plant Guide</a></li>
+          <li><a href="about">About Us</a></li>
+          </ul>
+    </div>
+
+    <div class="contain">
+<form method="post" action="/crppred">
+
+  <label for="n">Nitrogen(%)</label>
+  <select type="number" id="N" name="N">
+    <option value="1">0-10</option>
+    <option value="2">10-20</option>
+    <option value="3">20-30</option>
+     <option value="4">30-40</option>
+      <option value="5">40-50</option>
+       <option value="6">50-60</option>
+        <option value="7">60-70</option>
+      <option value="8">70-80</option>
+       <option value="9">80-90</option>
+        <option value="10">90-100</option>
+  </select>
+
+  <label for="p">Phosphorous(%)</label>
+  <select type="number" id="P" name="P">
+    <option value="1">0-10</option>
+    <option value="2">10-20</option>
+    <option value="3">20-30</option>
+     <option value="4">30-40</option>
+      <option value="5">40-50</option>
+       <option value="6">50-60</option>
+        <option value="7">60-70</option>
+      <option value="8">70-80</option>
+       <option value="9">80-90</option>
+        <option value="10">90-100</option>
+  </select>
+
+  <label for="k">Potassium(%)</label>
+  <select type="number" id="K" name="K">
+    <option value="1">0-10</option>
+    <option value="2">10-20</option>
+    <option value="3">20-30</option>
+     <option value="4">30-40</option>
+      <option value="5">40-50</option>
+       <option value="6">50-60</option>
+        <option value="7">60-70</option>
+      <option value="8">70-80</option>
+       <option value="9">80-90</option>
+        <option value="10">90-100</option>
+  </select>
+
+  <label for="temperature">Temperature</label>
+  <input type="number" id="temperature" name="temperature" min=5 max=30>
+
+    <label for="humidity">Humidity</label>
+  <input type="number" id="humidity" name="humidity" min=52 max=95>
+
+
+  <label for="ph">pH level</label>
+  <select id="ph" name="ph">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+     <option value="4">4</option>
+      <option value="5">5</option>
+       <option value="6">6</option>
+        <option value="7">7</option>
+  </select>
+
+
+        <label for="Area">Area (square km)</label>
+  <input type="number" id="Area" name="Area" min=5>
+
+    <label for="use">Use of Pestidicides/Weedicides</label>
+    <select type="number" id="use" name="use">
+    <option value="1">Yes</option>
+    <option value="2">No</option>
+    </select>
+
+    <label for="conc">Concentration of pesticides/weedicide used</label>
+    <select type="number" id="conc" name="conc">
+    <option value="1">High</option>
+    <option value="2">Moderate</option>
+        <option value="3">Low</option>
+        <option value="2">Not used</option>
+    </select>
+
+
+  <input type="submit" action="/crppred" value="Predict">
+</form>
+    </div>
+</body>
+</html>

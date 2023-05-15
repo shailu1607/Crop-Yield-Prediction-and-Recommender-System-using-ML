@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/result.css">
+</head>
+<body>
+<header>
+      <div class="container">
+        <h1>Crop Prediction and Recommender System</h1>
+      </div>
+      </header>
+    <div class="nav-area">
+      <ul>
+            <li ><a href="home">Home</a></li>
+            <li ><a href="prediction">Prediction</a></li>
+            <li><a href="guide">Plant Guide</a></li>
+          <li><a href="about">About Us</a></li>
+          </ul>
+    </div>
+
+{%  if resulty   %}
+<div class="cont">
+    <p>This Environment grows {{ resultc }} which gives the yield of approximately {{ resulty }}kilograms </p>
+    <img src="/static/images/display/{{resultc}}.jpg" alt="" srcset="">
+    <p>Using the recommended fertilizer {{ resultf }} can improve the yield</p>
+    <p>{{ message }}</p>
+    <p><a href= "/static/plantguide/{{ resultc }}.pdf" target="_blank" rel="noopener noreferrer">Want To Know more about cultivation.....</a></p>
+</div>
+{%  endif  %}
+
+</body>
+</html>
